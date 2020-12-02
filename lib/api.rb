@@ -1,10 +1,10 @@
 require_relative "../config/environment"
 class Cocktaildb::API
     def initialize
-        @url = https://www.thecocktaildb.com/api/json/v1/1/random.php
+        @url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
     end
 
-    def order_cocktail
+    def get_cocktail
         URI(@url)
         # uri = URI.parse(@url)
         binding.pry
