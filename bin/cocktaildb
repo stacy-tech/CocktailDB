@@ -2,4 +2,4 @@
 
 require_relative "../config/environment"
 
-cocktaildb::CLI.new.run
+# cocktaildb::CLI.new.run

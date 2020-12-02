@@ -5,10 +5,12 @@ class Cocktaildb::API
     end
 
     def get_cocktail
-        URI(@url)
-        # uri = URI.parse(@url)
-        binding.pry
+        # URI(@url)
+         uri = URI.parse(@url)
+         response = Net::HTTP.get(uri)
+         data = JSON.parse(response)
+         binding.pry
     end
 end 
 
-Cocktaildb::API.new.order_cocktail
+Cocktaildb::API.new.get_cocktail
