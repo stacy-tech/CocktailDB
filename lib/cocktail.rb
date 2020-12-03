@@ -1,3 +1,0 @@
-class Cocktaildb::Cocktail 
-
-end 
