@@ -26,4 +26,4 @@ class Cocktaildb::CLI
 
 end 
 
-Cocktaildb::CLI.new.list_drinks
+# Cocktaildb::CLI.new.list_drinks
