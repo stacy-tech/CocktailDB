@@ -17,13 +17,7 @@ class Cocktaildb::CLI
     end
 
     def list_drinks
-        # uri = URI.parse(@url)
-        # response = Net::HTTP.get(uri)
-        # drinks = JSON.parse(response)
-        Drinks.each do |drink|
-            puts "#{drink}"
-            binding.pry
-        end
+    
     end
 
     def goodbye
