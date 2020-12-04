@@ -13,4 +13,4 @@ class Cocktaildb::API
 
 end 
 
-# Cocktaildb::API.new.get_drinks
+Cocktaildb::API.new.get_drinks

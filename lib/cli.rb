@@ -1,3 +1,5 @@
+
+require_relative "../config/environment"
 class Cocktaildb::CLI 
 
     def run
@@ -7,7 +9,7 @@ class Cocktaildb::CLI
     end
 
     def greeting
-        puts "Hi! Welcome to Cocktaildb! I am Stacy your bartender"
+        puts "Hi! Welcome to Cocktaildb! I am Stacy your bartender, I'll be taking your order."
     end 
 
     def menu
@@ -15,9 +17,13 @@ class Cocktaildb::CLI
     end
 
     def list_drinks
-        uri = URI.parse(@url)
-        response = Net::HTTP.get(uri)
-        drinks = JSON.parse(response)
+        # uri = URI.parse(@url)
+        # response = Net::HTTP.get(uri)
+        # drinks = JSON.parse(response)
+        Drinks.each do |drink|
+            puts "#{drink}"
+            binding.pry
+        end
     end
 
     def goodbye
@@ -25,3 +31,5 @@ class Cocktaildb::CLI
     end
 
 end 
+
+Cocktaildb::CLI.new.list_drinks
